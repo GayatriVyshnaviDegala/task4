@@ -1,0 +1,62 @@
+
+.timeline {
+    position: relative;
+    margin-top: 40px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    background: #0f766e;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    width: 45%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    margin-right: auto;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: auto;
+}
+
+.timeline-item::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    width: 18px;
+    height: 18px;
+    background: #0f766e;
+    border-radius: 50%;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -40px;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -40px;
+}
+
+.timeline-item h3 {
+    color: #0f766e;
+    margin-bottom: 10px;
+}
+
+.timeline-item:hover {
+    transform: scale(1.03);
+    transition: .3s;
+}
